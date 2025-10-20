@@ -26,7 +26,7 @@ def fcc_news_search(query: str, max_results: int = 3):
 @mcp.tool()
 def fcc_youtube_search(query: str, max_results: int = 3):
     """Search freecodcamp Youtube channel via RSS by title/description"""
-    feed = feedparser.parse("https://www.youtube.com/feeds/videos.xml?channel_id=UCbTLwN10NoCU4WDzLf1JMOA")
+    feed = feedparser.parse("https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ")
     results = []
     query_lower = query.lower()
     for entry in feed.entries:
