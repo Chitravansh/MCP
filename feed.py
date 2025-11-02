@@ -37,5 +37,10 @@ def fcc_youtube_search(query: str, max_results: int = 3):
             break 
     return results or [{"message":"No videos found"}]
 
+# if __name__ == "__main__":
+#     mcp.run(transport="http")
+
 if __name__ == "__main__":
-    mcp.run(transport="http")
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    mcp.run(transport="http", host="0.0.0.0", port=port)
